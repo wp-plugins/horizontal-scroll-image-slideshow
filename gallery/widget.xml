@@ -1,0 +1,26 @@
+<gallery>
+  <image>
+    <path>http://i36.tinypic.com/29h8hk.jpg</path>
+    <title>Image 1</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/27/horizontal-scroll-image-slideshow/</link>
+	<target>_blank</target>
+  </image>
+  <image>
+    <path>http://i37.tinypic.com/2z6a847.jpg</path>
+    <title>Image 2</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/27/horizontal-scroll-image-slideshow/</link>
+	<target>_parent</target>
+  </image>
+  <image>
+    <path>http://i33.tinypic.com/2rf98wl.jpg</path>
+    <title>Image 3</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/27/horizontal-scroll-image-slideshow/</link>
+	<target>_blank</target>
+  </image>
+  <image>
+    <path>http://i37.tinypic.com/10f9f1c.jpg</path>
+    <title>Image 3</title>
+    <link>http://gopi.coolpage.biz/demo/2009/10/27/horizontal-scroll-image-slideshow/</link>
+	<target>_blank</target>
+  </image>
+</gallery>

@@ -5,7 +5,7 @@ Plugin Name: Horizontal scroll image slideshow
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Description: Horizontal scroll image slideshow lets you showcase images in a horizontal scroll like fashion, one image at a time and in a continuous manner, with no breaks between the first and last image.  
 Author: Gopi.R
-Version: 7.0
+Version: 7.1
 Author URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Donate link: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 License: GPLv2 or later

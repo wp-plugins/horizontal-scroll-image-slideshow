@@ -5,7 +5,7 @@ Plugin Name: Horizontal scroll image slideshow
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Description: Horizontal scroll image slideshow lets you showcase images in a horizontal scroll like fashion, one image at a time and in a continuous manner, with no breaks between the first and last image.  
 Author: Gopi.R
-Version: 7.1
+Version: 7.2
 Author URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Donate link: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 License: GPLv2 or later
@@ -157,20 +157,19 @@ function hsis_admin_option()
 	?>
 	</td><td align="center" valign="middle"></td></tr></table>
 	</form>
-    <hr />
+    <br />
     <strong>We can use this plug-in in two different way.</strong>
 	<ol>
-	<li>Go to widget menu and drag and drop the "horizontal scroll image slideshow" widget to your sidebar location.</li>
-	<li>Copy and past the below mentioned code to your desired template location.</li>
+		<li>Go to widget menu and drag and drop the "horizontal scroll image slideshow" widget to your sidebar location.</li>
+		<li>Copy and past the below mentioned code to your desired template location.</li>
 	</ol>
     <strong>Paste the below code to your desired template location!</strong>
-    <div style="padding-top:7px;padding-bottom:20px;">
-    <code style="padding:7px;">
-    &lt;?php if (function_exists (hsis_show)) hsis_show(); ?&gt;
-    </code></div>
+    <ul>
+    	<li><code style="padding:7px;">&lt;?php if (function_exists (hsis_show)) hsis_show(); ?&gt;</code></li>
+	</ul>
     <strong>How to upload images?</strong>
 	<ul>
-    <li>Check official website for live demo and <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/'>more information</a></li>
+    	<li>Check official website for live demo and more information <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/'>click here</a></li>
 	</ul>
     </p>
     </form>
@@ -181,7 +180,7 @@ function hsis_admin_option()
 
 function hsis_control()
 {
-	echo '<p>horizontal scroll image slideshow.<br> To change the setting goto horizontal scroll image slideshow link under SETTING tab.';
+	echo '<p>Horizontal scroll image slideshow.<br> To change the setting goto horizontal scroll image slideshow link under SETTING tab.';
 	echo ' <a href="options-general.php?page=horizontal-scroll-image-slideshow/horizontal-scroll-image-slideshow.php">';
 	echo 'click here</a></p>';
 }
@@ -201,11 +200,7 @@ function hsis_widget_init()
 
 function hsis_deactivation() 
 {
-	//delete_option('hsis_title');
-	//delete_option('hsis_width');
-	//delete_option('hsis_height');
-	//delete_option('hsis_bgcolor');
-	//delete_option('hsis_speed');
+	// No action required.
 }
 
 function hsis_add_to_menu() 

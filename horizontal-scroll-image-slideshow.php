@@ -5,7 +5,7 @@ Plugin Name: Horizontal scroll image slideshow
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Description: Horizontal scroll image slideshow lets you showcase images in a horizontal scroll like fashion, one image at a time and in a continuous manner, with no breaks between the first and last image.  
 Author: Gopi.R
-Version: 8.0
+Version: 8.1
 Author URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Donate link: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 License: GPLv2 or later
@@ -111,77 +111,86 @@ function hsis_widget($args)
 
 function hsis_admin_option() 
 {
-	echo "<div class='wrap'>";
-	echo "<h2>Horizontal scroll image slideshow</h2>"; 
-    
-	$hsis_title = get_option('hsis_title');
-	$hsis_width = get_option('hsis_width');
-	$hsis_height = get_option('hsis_height');
-	$hsis_bgcolor = get_option('hsis_bgcolor');
-	$hsis_speed = get_option('hsis_speed');
-	
-	if (@$_POST['hsis_submit']) 
-	{
-		$hsis_title = stripslashes($_POST['hsis_title']);
-		$hsis_width = stripslashes($_POST['hsis_width']);
-		$hsis_height = stripslashes($_POST['hsis_height']);
-		$hsis_bgcolor = stripslashes($_POST['hsis_bgcolor']);
-		$hsis_speed = stripslashes($_POST['hsis_speed']);
-		
-		update_option('hsis_title', $hsis_title );
-		update_option('hsis_width', $hsis_width );
-		update_option('hsis_height', $hsis_height );
-		update_option('hsis_bgcolor', $hsis_bgcolor );
-		update_option('hsis_speed', $hsis_speed );
-	}
 	?>
-	<form name="hsis_form" method="post" action="">
-	<table width="100%" border="0" cellspacing="0" cellpadding="3"><tr><td align="left">
-	<?php
-	echo '<p>Title:<br><input  style="width: 450px;" maxlength="200" type="text" value="';
-	echo $hsis_title . '" name="hsis_title" id="hsis_title" /></p>';
+	<div class="wrap">
+	  <div class="form-wrap">
+		<div id="icon-edit" class="icon32 icon32-posts-post"><br>
+		</div>
+		<h2>Horizontal scroll image slideshow</h2>
+		<?php
+		$hsis_title = get_option('hsis_title');
+		$hsis_width = get_option('hsis_width');
+		$hsis_height = get_option('hsis_height');
+		$hsis_bgcolor = get_option('hsis_bgcolor');
+		$hsis_speed = get_option('hsis_speed');
 	
-	echo '<p>Width:<br><input  style="width: 100px;" maxlength="4" type="text" value="';
-	echo $hsis_width . '" name="hsis_width" id="hsis_width" /> Only Number (This width should be the largest image width in your slideshow!)</p>';
-	
-	echo '<p>Height:<br><input  style="width: 100px;" maxlength="4" type="text" value="';
-	echo $hsis_height . '" name="hsis_height" id="hsis_height" /> Only Number</p>';
-	
-	echo '<p>Bgcolor:<br><input maxlength="10" style="width: 100px;" type="text" value="';
-	echo $hsis_bgcolor . '" name="hsis_bgcolor" id="hsis_bgcolor" /></p>';
-	
-	echo '<p>Speed:<br><input maxlength="5" style="width: 100px;" type="text" value="';
-	echo $hsis_speed . '" name="hsis_speed" id="hsis_speed" /> Only Number</p>';
-	
-	echo '<input name="hsis_submit" id="hsis_submit" class="button-primary" value="Submit" type="submit" />';
-	?>
-	</td><td align="center" valign="middle"></td></tr></table>
-	</form>
-    <br />
-    <strong>We can use this plug-in in two different way.</strong>
+		if (isset($_POST['hsis_form_submit']) && $_POST['hsis_form_submit'] == 'yes')
+		{
+			//	Just security thingy that wordpress offers us
+			check_admin_referer('hsis_form_setting');
+				
+			$hsis_title = stripslashes($_POST['hsis_title']);
+			$hsis_width = stripslashes($_POST['hsis_width']);
+			$hsis_height = stripslashes($_POST['hsis_height']);
+			$hsis_bgcolor = stripslashes($_POST['hsis_bgcolor']);
+			$hsis_speed = stripslashes($_POST['hsis_speed']);
+			
+			update_option('hsis_title', $hsis_title );
+			update_option('hsis_width', $hsis_width );
+			update_option('hsis_height', $hsis_height );
+			update_option('hsis_bgcolor', $hsis_bgcolor );
+			update_option('hsis_speed', $hsis_speed );
+			
+			?>
+			<div class="updated fade">
+				<p><strong>Details successfully updated.</strong></p>
+			</div>
+			<?php
+		}
+		?>
+		<h3>Plugin setting</h3>
+		<form name="hsis_form" method="post" action="#">
+			
+			<label for="tag-title">Title</label>
+			<input name="hsis_title" type="text" value="<?php echo $hsis_title; ?>"  id="hsis_title" size="70" maxlength="100">
+			<p>Please enter your widget title.</p>
+			
+			<label for="tag-title">Width</label>
+			<input name="hsis_width" type="text" value="<?php echo $hsis_width; ?>"  id="hsis_width" maxlength="4">
+			<p>Please enter your slideshow width. <br />This width should be the largest image width in your slideshow. (Example: 205)</p>
+			
+			<label for="tag-title">Height</label>
+			<input name="hsis_height" type="text" value="<?php echo $hsis_height; ?>"  id="hsis_height" maxlength="4">
+			<p>Please enter your slideshow height, Only Number. (Example: 150)</p>
+			
+			<label for="tag-title">Bgcolor</label>
+			<input name="hsis_bgcolor" type="text" value="<?php echo $hsis_bgcolor; ?>"  id="hsis_bgcolor" maxlength="20">
+			<p>Please enter slideshow bgcolor, (Example: white)</p>
+			
+			<label for="tag-title">Speed</label>
+			<input name="hsis_speed" type="text" value="<?php echo $hsis_speed; ?>"  id="hsis_speed" maxlength="5">
+			<p>Please enter your slideshow speed, Only Number. (Example: 2000)</p>
+			
+			<input type="hidden" name="hsis_form_submit" value="yes"/>
+			<input name="hsis_submit" id="hsis_submit" class="button" value="Submit" type="submit" />
+			<a class="button" target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/">Help</a>
+			<?php wp_nonce_field('hsis_form_setting'); ?>
+		</form>
+		</div>
+	<h3>Plugin configuration option</h3>
 	<ol>
-		<li>Go to widget menu and drag and drop the "horizontal scroll image slideshow" widget to your sidebar location.</li>
-		<li>Copy and past the below mentioned code to your desired template location.</li>
+		<li>Drag and drop the widget to your sidebar.</li>
+		<li>Add directly in to the theme using PHP code.</li>
 	</ol>
-    <strong>Paste the below code to your desired template location!</strong>
-    <ul>
-    	<li><code style="padding:7px;">&lt;?php if (function_exists (hsis_show)) hsis_show(); ?&gt;</code></li>
-	</ul>
-    <strong>How to upload images?</strong>
-	<ul>
-    	<li>Check official website for live demo and more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/">click here</a></li>
-	</ul>
-    </p>
-    </form>
-    
+	<p class="description">Check official website for more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/">click here</a></p>
+	</div>
 	<?php
-	echo "</div>";
 }
 
 function hsis_control()
 {
-	echo '<p>Horizontal scroll image slideshow.<br> To change the setting goto horizontal scroll image slideshow link under SETTING tab.';
-	echo ' <a href="options-general.php?page=horizontal-scroll-image-slideshow/horizontal-scroll-image-slideshow.php">';
+	echo '<p>Horizontal scroll image slideshow.<br> To change the setting goto <b>Horizontal scroll image slideshow</b> link under <b>Settings</b> tab.';
+	echo ' <a href="options-general.php?page=horizontal-scroll-image-slideshow">';
 	echo 'click here</a></p>';
 }
 
@@ -207,7 +216,7 @@ function hsis_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page('Horizontal scroll image slideshow', 'Horizontal scroll image slideshow', 'manage_options', __FILE__, 'hsis_admin_option' );
+		add_options_page('Horizontal scroll image slideshow', 'Horizontal scroll image slideshow', 'manage_options', 'horizontal-scroll-image-slideshow', 'hsis_admin_option' );
 	}
 }
 

@@ -1,8 +1,8 @@
 === Horizontal scroll image slideshow ===
 Contributors: www.gopiplus.com, gopiplus
 Requires at least: 3.4
-Tested up to: 3.6
-Stable tag: 8.1
+Tested up to: 3.8
+Stable tag: 8.2
 Author URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Donate link: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
@@ -49,9 +49,17 @@ Q4. I want to use this plugin in the pages or posts?
 
 == Screenshots ==
 
-1. http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/	
+1. Front Screen. http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/	
+
+2. Admin Screen. http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/	
 
 == Upgrade Notice == 
+
+= 8.2 =	
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (horizontal-scroll-image.po) available in the languages folder.
 
 = 8.1 =	
 
@@ -105,6 +113,12 @@ Tested upto 3.0.1
 First version
 
 == Changelog ==
+
+= 8.2 =	
+
+1. Tested up to 3.8
+2. Now this plugin supports localization (or internationalization). i.e. option to translate into other languages. 
+Plugin *.po file (horizontal-scroll-image.po) available in the languages folder.
 
 = 8.1 =	
 

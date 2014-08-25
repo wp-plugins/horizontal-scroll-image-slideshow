@@ -1,16 +1,16 @@
 === Horizontal scroll image slideshow ===
 Contributors: www.gopiplus.com, gopiplus
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 8.3
+Tested up to: 4.0
+Stable tag: 8.4
 Author URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Donate link: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
-Tags: Scroll, images, slideshow, gallery, image, widget, slideshow
+Tags: scroll, images, slideshow, gallery, image, widget
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
-This plug-in will create the Horizontal scroll image slideshow gallery at side sidebar widget see live demo.
+This plugin will create the Horizontal scroll image slideshow gallery at side sidebar widget see live demo.
 
 == Description ==
 
@@ -28,8 +28,6 @@ Horizontal scroll image slideshow lets you showcase images in a horizontal scrol
 * Easy installation.  
 * Widgets, so you can add pretty much anything.  
 * Easy slideshow size (width & height) override option.
-
-Tags: Scroll, images, slideshow, gallery, image, widget,slideshow, media
  
 == Installation ==
 
@@ -54,6 +52,10 @@ Q4. I want to use this plugin in the pages or posts?
 2. Admin Screen. http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/	
 
 == Upgrade Notice == 
+
+= 8.4 =	
+
+1. Tested up to 4.0
 
 = 8.3 =	
 
@@ -117,6 +119,10 @@ Tested upto 3.0.1
 First version
 
 == Changelog ==
+
+= 8.4 =	
+
+1. Tested up to 4.0
 
 = 8.3 =	
 

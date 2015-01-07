@@ -1,8 +1,8 @@
 === Horizontal scroll image slideshow ===
 Contributors: www.gopiplus.com, gopiplus
 Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 8.4
+Tested up to: 4.1
+Stable tag: 8.5
 Author URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Donate link: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
@@ -52,6 +52,10 @@ Q4. I want to use this plugin in the pages or posts?
 2. Admin Screen. http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/	
 
 == Upgrade Notice == 
+
+= 8.5 =	
+
+1. Tested up to 4.1
 
 = 8.4 =	
 
@@ -119,6 +123,10 @@ Tested upto 3.0.1
 First version
 
 == Changelog ==
+
+= 8.5 =	
+
+1. Tested up to 4.1
 
 = 8.4 =	
 

@@ -4,11 +4,13 @@ Plugin Name: Horizontal scroll image slideshow
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Description: Horizontal scroll image slideshow lets you showcase images in a horizontal scroll like fashion, one image at a time and in a continuous manner, with no breaks between the first and last image.  
 Author: Gopi Ramasamy
-Version: 8.6
+Version: 8.8
 Author URI: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 Donate link: http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: horizontal-scroll-image-slideshow
+Domain Path: /languages
 */
 
 function hsis_show() 
@@ -115,7 +117,7 @@ function hsis_admin_option()
 	  <div class="form-wrap">
 		<div id="icon-edit" class="icon32 icon32-posts-post"><br>
 		</div>
-		<h2><?php _e('Horizontal scroll image slideshow', 'horizontal-scroll-image'); ?></h2>
+		<h2><?php _e('Horizontal scroll image slideshow', 'horizontal-scroll-image-slideshow'); ?></h2>
 		<?php
 		$hsis_title = get_option('hsis_title');
 		$hsis_width = get_option('hsis_width');
@@ -142,47 +144,47 @@ function hsis_admin_option()
 			
 			?>
 			<div class="updated fade">
-				<p><strong><?php _e('Details successfully updated.', 'horizontal-scroll-image'); ?></strong></p>
+				<p><strong><?php _e('Details successfully updated.', 'horizontal-scroll-image-slideshow'); ?></strong></p>
 			</div>
 			<?php
 		}
 		?>
-		<h3><?php _e('Plugin setting', 'horizontal-scroll-image'); ?></h3>
+		<h3><?php _e('Plugin setting', 'horizontal-scroll-image-slideshow'); ?></h3>
 		<form name="hsis_form" method="post" action="#">
 			
-			<label for="tag-title"><?php _e('Title', 'horizontal-scroll-image'); ?></label>
+			<label for="tag-title"><?php _e('Title', 'horizontal-scroll-image-slideshow'); ?></label>
 			<input name="hsis_title" type="text" value="<?php echo $hsis_title; ?>"  id="hsis_title" size="70" maxlength="100">
-			<p><?php _e('Please enter your widget title.', 'horizontal-scroll-image'); ?></p>
+			<p><?php _e('Please enter your widget title.', 'horizontal-scroll-image-slideshow'); ?></p>
 			
-			<label for="tag-title"><?php _e('Width', 'horizontal-scroll-image'); ?></label>
+			<label for="tag-title"><?php _e('Width', 'horizontal-scroll-image-slideshow'); ?></label>
 			<input name="hsis_width" type="text" value="<?php echo $hsis_width; ?>"  id="hsis_width" maxlength="4">
-			<p><?php _e('Please enter your slideshow width. <br />This width should be the largest image width in your slideshow.', 'horizontal-scroll-image'); ?> (Example: 205)</p>
+			<p><?php _e('Please enter your slideshow width. <br />This width should be the largest image width in your slideshow.', 'horizontal-scroll-image-slideshow'); ?> (Example: 205)</p>
 			
-			<label for="tag-title"><?php _e('Height', 'horizontal-scroll-image'); ?></label>
+			<label for="tag-title"><?php _e('Height', 'horizontal-scroll-image-slideshow'); ?></label>
 			<input name="hsis_height" type="text" value="<?php echo $hsis_height; ?>"  id="hsis_height" maxlength="4">
-			<p><?php _e('Please enter your slideshow height, Only Number.', 'horizontal-scroll-image'); ?> (Example: 150)</p>
+			<p><?php _e('Please enter your slideshow height, Only Number.', 'horizontal-scroll-image-slideshow'); ?> (Example: 150)</p>
 			
-			<label for="tag-title"><?php _e('Bgcolor', 'horizontal-scroll-image'); ?></label>
+			<label for="tag-title"><?php _e('Bgcolor', 'horizontal-scroll-image-slideshow'); ?></label>
 			<input name="hsis_bgcolor" type="text" value="<?php echo $hsis_bgcolor; ?>"  id="hsis_bgcolor" maxlength="20">
-			<p><?php _e('Please enter slideshow bgcolor,', 'horizontal-scroll-image'); ?> (Example: white)</p>
+			<p><?php _e('Please enter slideshow bgcolor,', 'horizontal-scroll-image-slideshow'); ?> (Example: white)</p>
 			
-			<label for="tag-title"><?php _e('Speed', 'horizontal-scroll-image'); ?></label>
+			<label for="tag-title"><?php _e('Speed', 'horizontal-scroll-image-slideshow'); ?></label>
 			<input name="hsis_speed" type="text" value="<?php echo $hsis_speed; ?>"  id="hsis_speed" maxlength="5">
-			<p><?php _e('Please enter your slideshow speed, Only Number.', 'horizontal-scroll-image'); ?> (Example: 2000)</p>
+			<p><?php _e('Please enter your slideshow speed, Only Number.', 'horizontal-scroll-image-slideshow'); ?> (Example: 2000)</p>
 			
 			<input type="hidden" name="hsis_form_submit" value="yes"/>
 			<input name="hsis_submit" id="hsis_submit" class="button" value="Submit" type="submit" />
-			<a class="button" target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/"><?php _e('Help', 'horizontal-scroll-image'); ?></a>
+			<a class="button" target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/"><?php _e('Help', 'horizontal-scroll-image-slideshow'); ?></a>
 			<?php wp_nonce_field('hsis_form_setting'); ?>
 		</form>
 		</div>
-	<h3><?php _e('Plugin configuration option', 'horizontal-scroll-image'); ?></h3>
+	<h3><?php _e('Plugin configuration option', 'horizontal-scroll-image-slideshow'); ?></h3>
 	<ol>
-		<li><?php _e('Drag and drop the widget to your sidebar.', 'horizontal-scroll-image'); ?></li>
-		<li><?php _e('Add directly in to the theme using PHP code.', 'horizontal-scroll-image'); ?></li>
+		<li><?php _e('Drag and drop the widget to your sidebar.', 'horizontal-scroll-image-slideshow'); ?></li>
+		<li><?php _e('Add directly in to the theme using PHP code.', 'horizontal-scroll-image-slideshow'); ?></li>
 	</ol>
-	<p class="description"><?php _e('Check official website for more information', 'horizontal-scroll-image'); ?> 
-	<a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/"><?php _e('click here', 'horizontal-scroll-image'); ?></a></p>
+	<p class="description"><?php _e('Check official website for more information', 'horizontal-scroll-image-slideshow'); ?> 
+	<a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/"><?php _e('click here', 'horizontal-scroll-image-slideshow'); ?></a></p>
 	</div>
 	<?php
 }
@@ -190,23 +192,23 @@ function hsis_admin_option()
 function hsis_control()
 {
 	echo '<p><b>';
-	_e('Horizontal scroll image slideshow', 'horizontal-scroll-image');
+	_e('Horizontal scroll image slideshow', 'horizontal-scroll-image-slideshow');
 	echo '.</b> ';
-	_e('Check official website for more information', 'horizontal-scroll-image');
-	?> <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/"><?php _e('click here', 'horizontal-scroll-image'); ?></a></p><?php
+	_e('Check official website for more information', 'horizontal-scroll-image-slideshow');
+	?> <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/horizontal-scroll-image-slideshow/"><?php _e('click here', 'horizontal-scroll-image-slideshow'); ?></a></p><?php
 }
 
 function hsis_widget_init()
 {
 	if(function_exists('wp_register_sidebar_widget')) 	
 	{
-		wp_register_sidebar_widget('horizontal-scroll-image-slideshow', __('Horizontal scroll image slideshow', 'horizontal-scroll-image'), 'hsis_widget');
+		wp_register_sidebar_widget('horizontal-scroll-image-slideshow', __('Horizontal scroll image slideshow', 'horizontal-scroll-image-slideshow'), 'hsis_widget');
 	}
 	
 	if(function_exists('wp_register_widget_control')) 	
 	{
 		wp_register_widget_control('horizontal-scroll-image-slideshow', 
-				array( __('Horizontal scroll image slideshow', 'horizontal-scroll-image'), 'widgets'), 'hsis_control');
+				array( __('Horizontal scroll image slideshow', 'horizontal-scroll-image-slideshow'), 'widgets'), 'hsis_control');
 	} 
 }
 
@@ -219,14 +221,14 @@ function hsis_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page( __('Horizontal scroll image slideshow', 'horizontal-scroll-image'), 
-				__('Horizontal scroll image slideshow', 'horizontal-scroll-image'), 'manage_options', 'horizontal-scroll-image-slideshow', 'hsis_admin_option' );
+		add_options_page( __('Horizontal scroll image slideshow', 'horizontal-scroll-image-slideshow'), 
+				__('Horizontal scroll image slideshow', 'horizontal-scroll-image-slideshow'), 'manage_options', 'horizontal-scroll-image-slideshow', 'hsis_admin_option' );
 	}
 }
 
 function hsis_textdomain() 
 {
-	  load_plugin_textdomain( 'horizontal-scroll-image', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	  load_plugin_textdomain( 'horizontal-scroll-image-slideshow', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
 add_action('plugins_loaded', 'hsis_textdomain');
